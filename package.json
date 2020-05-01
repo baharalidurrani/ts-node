@@ -1,0 +1,21 @@
+{
+  "name": "ts-node-vanilla-boilerplate",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "author": "baharalidurrani",
+  "scripts": {
+    "start": "ts-node-dev --respawn ./src/index.ts",
+    "debug": "ts-node-dev --respawn --inspect=5858 ./src/index.ts",
+    "build": "tsc",
+    "serve": "node ./dist/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2",
+    "ts-node": "^8.9.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  }
+}
