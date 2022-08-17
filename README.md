@@ -1,4 +1,4 @@
-# ts-node-vanilla-boilerplate
+# ts-node
 
 TypeScript, Node, ts-node-dev and VS Code debugger
 
