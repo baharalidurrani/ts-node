@@ -15,7 +15,7 @@ much faster that `nodemon`
 
 to start the app with `ts-node-dev` and debugger attached
 
-But before, in VS Code press Command + Shift + P and select Debug: Toggle Auto Attach -> Smart
+But before, in VS Code press Command + Shift + P and select Debug: Toggle Auto Attach -> Only With Flag
 
 ## `npm run build`
 
