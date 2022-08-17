@@ -9,7 +9,8 @@
     "npm": ">= 8.15.0"
   },
   "scripts": {
-    "start": "ts-node-dev --respawn ./src/index.ts",
+    "start": "ts-node-dev ./src/index.ts",
+    "dev": "ts-node-dev --respawn ./src/index.ts",
     "debug": "ts-node-dev --respawn --inspect=5858 ./src/index.ts",
     "build": "rm -rf dist && tsc",
     "serve": "node dist/index.js",
