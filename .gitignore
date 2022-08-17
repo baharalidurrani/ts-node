@@ -1,2 +1,12 @@
 node_modules
-/dist
+dist
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+.vscode/*
