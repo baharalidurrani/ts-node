@@ -1,6 +1,15 @@
 # ts-node
 
-TypeScript, Node, ts-node-dev and VS Code debugger
+Typescript Node barebone boilerplate. This basic architecture consists of:
+
+- Node
+- Typescript
+- Docker
+- GitHub Actions
+- ESLint
+- Prettier
+- ts-node-dev
+- VS Code debugger
 
 ## `npm install`
 
@@ -25,10 +34,13 @@ to build everything inside the `src/` folder and output JS files to `dist/` fold
 
 to launch the production build of the app using `node ./dist/index.js`
 
+## `npm run upgrade`
+
+to upgrade all npm packages to their latest versions
+
 ## more
 
 - improvements are highly appreciated
 - don't forget to star the repo
 
 ## thanks
-
