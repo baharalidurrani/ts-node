@@ -1,6 +1,6 @@
 {
   "name": "ts-node",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Typescript Node barebone boilerplate.",
   "author": "baharalidurrani@gmail.com",
   "main": "dist/index.js",
