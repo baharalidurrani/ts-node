@@ -1,3 +1,3 @@
-import { localModule } from "src/localModule";
+import { localModule } from 'src/localModule';
 
-console.log("Nested calling parent:", localModule);
+console.log('Nested calling parent:', localModule);

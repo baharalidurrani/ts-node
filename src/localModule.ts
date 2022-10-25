@@ -1,1 +1,1 @@
-export const localModule = "local module";
+export const localModule = 'local module';
