@@ -26,25 +26,20 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: 18
-          cache: "npm"
-      - run: npm ci
+          version: 10
+      - name: Use Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
 
-      # - name: Cache dependencies
-      #   id: cache
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: ./node_modules
-      #     key: modules-${{ hashFiles('package-lock.json') }}
-
-      # - name: Install dependencies
-      #   if: steps.cache.outputs.cache-hit != 'true'
-      #   run: npm ci --ignore-scripts
-
-      - run: npm run lint
-      - run: npm run build
-      # - run: npm test
+      - run: pnpm lint
+      - run: pnpm build
+      # - run: pnpm test
