@@ -1,42 +1,38 @@
 {
-  "name": "ts-node",
-  "version": "3.0.1",
-  "description": "Typescript Node barebone boilerplate.",
+  "name": "ts-node-template",
+  "version": "4.0.0",
+  "description": "Typescript Node boilerplate.",
   "author": "baharalidurrani@gmail.com",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc",
-    "debug": "ts-node-dev --respawn --inspect=5858 ./src/index.ts",
+    "start": "ts-node-dev ./src/index.ts",
     "dev": "ts-node-dev --respawn ./src/index.ts",
+    "debug": "ts-node-dev --respawn --inspect=5858 ./src/index.ts",
+    "build": "rm -rf dist && tsc",
+    "serve": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "docker-build": "docker build -t ts-node .",
     "docker-run": "docker run -p 8000:8000 ts-node",
-    "lint": "eslint \"src/**/*.{ts,js}\"",
-    "lint:fix": "eslint \"src/**/*.{ts,js}\" --fix",
+    "lint": "eslint \"src/**/*.{ts,js}\" --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint \"src/**/*.{ts,js}\" --report-unused-disable-directives --max-warnings 0  --fix",
     "pretty": "prettier --write \"src/**/*.+(ts|js)\"",
-    "serve": "node dist/index.js",
-    "start": "ts-node-dev ./src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "upgrade": "npx npm-check-updates -u && npm install"
+    "dep:update": "npm-check-updates -u"
   },
   "dependencies": {
-    "module-alias": "^2.2.2"
+    "module-alias": "^2.2.3"
   },
   "devDependencies": {
-    "@types/module-alias": "^2.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.41.0",
-    "eslint": "^8.26.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard-with-typescript": "^23.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.3.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "prettier": "^2.7.1",
+    "@eslint/js": "^9.39.1",
+    "@types/module-alias": "^2.0.4",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "npm-check-updates": "^19.1.2",
+    "prettier": "^3.6.2",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^4.8.4"
-  },
-  "engines": {
-    "node": ">= 18.7.0",
-    "npm": ">= 8.15.0"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4"
   }
 }

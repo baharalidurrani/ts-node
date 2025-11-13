@@ -4,13 +4,13 @@ FROM node:alpine
 WORKDIR /usr/src/app
 
 # Separate docker layer for npm install (faster cached install)
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install
 
 # ENV VM=1
 
 COPY . .
-RUN npm run build
+RUN pnpm build
 
 EXPOSE 8000
-CMD [ "npm", "run", "serve" ]
+CMD [ "pnpm", "serve" ]
